@@ -12,6 +12,7 @@
 - 即時搜尋文章標題、摘要和內容
 - 每篇筆記顯示上傳與更新日期，按「閱讀全文」會在新分頁開啟全文頁 `article.html?id=…`，可在全文頁收藏
 - 筆記內容、日期與閱讀時間集中在 `articles.js` 的 `articles` 資料中；日期以 `published`、`updated`（格式 `YYYY-MM-DD`）設定
+- 全文頁可放主圖（`articles.js` 的 `image` 欄位，圖片放在 `img/`），範本與提示詞皆可一鍵複製
 - 收藏文章；收藏清單儲存在目前瀏覽器的 `localStorage`
 - 使用頂端搜尋欄的 `/` 快速鍵
 - 「文章總覽」表格，可在表格中直接開啟文章、切換收藏並查看收藏進度
@@ -19,6 +20,6 @@
 
 ## 部署
 
-將 `index.html`、`article.html`、`styles.css`、`articles.js`、`app.js`、`article.js` 一起部署到任何靜態網站主機即可。Google Fonts 字型需要網路連線；無法載入時，網站會使用系統字型。
+將 `index.html`、`article.html`、`styles.css`、`articles.js`、`app.js`、`article.js` 與 `img/` 資料夾一起部署到任何靜態網站主機即可。Google Fonts 字型需要網路連線；無法載入時，網站會使用系統字型。
 
 本網站不會將資料送到伺服器；收藏僅保存在目前瀏覽器。延伸閱讀連結會開啟各組織的公開 AI 學習資源。

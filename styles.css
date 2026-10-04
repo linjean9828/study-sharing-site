@@ -212,6 +212,13 @@ main > .section:first-child { padding-top: 24px; }
 .article-content p { margin: 8px 0; }
 .prompt-example { margin-top: 28px; padding: 20px; border: 1px solid var(--slate-200); border-radius: 16px; background: var(--slate-50); }
 .example-label { display: block; margin-top: 14px; color: #6d28d9; font-size: 14px; }
+.article-figure { margin: 28px auto 0; max-width: 560px; text-align: center; }
+.article-figure[hidden] { display: none; }
+.article-figure a { display: block; overflow: hidden; border: 1px solid var(--slate-200); border-radius: 16px; box-shadow: var(--shadow-lg); transition: box-shadow .2s, transform .2s; }
+.article-figure a:hover { box-shadow: var(--shadow-xl); transform: translateY(-2px); }
+.article-figure img { display: block; width: 100%; height: auto; }
+.article-figure figcaption { margin-top: 10px; color: var(--slate-500); font-size: 13px; }
+.example-desc { margin: 4px 0 0; color: var(--slate-500); font-size: 14px; line-height: 1.7; }
 .example-box { position: relative; }
 .example-box .example-text { padding-right: 96px; }
 .copy-button { position: absolute; top: 10px; right: 10px; padding: 6px 12px; border: 1px solid rgba(148, 163, 184, .4); border-radius: 8px; background: rgba(255, 255, 255, .08); color: var(--slate-200); font-size: 13px; font-weight: 600; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }

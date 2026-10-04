@@ -84,23 +84,59 @@ function renderContent() {
       const label = document.createElement("strong");
       label.className = "example-label";
       label.textContent = item.label;
+      section.append(label);
+      if (item.desc) {
+        const desc = document.createElement("p");
+        desc.className = "example-desc";
+        desc.textContent = item.desc;
+        section.append(desc);
+      }
       const text = document.createElement("pre");
       text.className = "example-text";
       text.textContent = item.text;
       const box = document.createElement("div");
       box.className = "example-box";
       box.append(text, createCopyButton(item.text, item.label));
-      section.append(label, box);
+      section.append(box);
     });
 
-    const note = document.createElement("p");
-    note.className = "example-note";
-    note.textContent = example.note;
-    section.append(note);
+    if (example.note) {
+      const note = document.createElement("p");
+      note.className = "example-note";
+      note.textContent = example.note;
+      section.append(note);
+    }
     blocks.push(section);
   });
 
   document.querySelector("#article-content").replaceChildren(...blocks);
+}
+
+// 文章主圖：點擊在新分頁開啟原尺寸圖片
+function renderImage() {
+  const { src, alt, caption, width, height } = article.image;
+  const figure = document.querySelector("#article-figure");
+  const link = document.createElement("a");
+  link.href = src;
+  link.target = "_blank";
+  link.rel = "noopener";
+  link.setAttribute("aria-label", `在新分頁開啟大圖：${alt}`);
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+  if (width && height) {
+    img.width = width;
+    img.height = height;
+  }
+  img.decoding = "async";
+  link.append(img);
+  figure.replaceChildren(link);
+  if (caption) {
+    const figcaption = document.createElement("figcaption");
+    figcaption.textContent = caption;
+    figure.append(figcaption);
+  }
+  figure.hidden = false;
 }
 
 function renderSources() {
@@ -132,14 +168,20 @@ if (article) {
   document.querySelector("#article-intro").textContent = article.intro;
   if (article.credit) {
     const credit = document.querySelector("#article-credit");
-    const link = document.createElement("a");
-    link.href = article.credit.url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = article.credit.label;
-    credit.replaceChildren("本文為重點摘要，出處：", link);
+    const prefix = article.credit.prefix || "本文為重點摘要，出處：";
+    if (article.credit.url) {
+      const link = document.createElement("a");
+      link.href = article.credit.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = article.credit.label;
+      credit.replaceChildren(prefix, link);
+    } else {
+      credit.replaceChildren(prefix + article.credit.label);
+    }
     credit.hidden = false;
   }
+  if (article.image) renderImage();
   renderContent();
   renderSources();
   updateBookmark();

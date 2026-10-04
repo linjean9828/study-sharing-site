@@ -1,4 +1,226 @@
 const articles = {
+  gptcodes: {
+    category: "AI 工具 · 提示詞",
+    title: "ChatGPT Codes (Powerful prompts. Better answers.)",
+    published: "2026-10-04",
+    updated: "2026-10-04",
+    minutes: 10,
+    intro: "ChatGPT Codes 是放在提示詞開頭的簡短代碼，像給 AI 的快捷指令，告訴它要用什麼方式回答，例如「ELI5 — Explain quantum computing」。本文整理 35 個常用代碼，每個都優化成可以直接複製使用的完整提示詞。",
+    credit: {
+      prefix: "圖片出處：",
+      label: "〈35 ChatGPT Codes〉Adam Digital；中文說明與提示詞由本站翻譯、優化"
+    },
+    image: {
+      src: "img/gpt_code.jpg",
+      alt: "35 ChatGPT Codes 速查表：ELI5、TL;DR、SWOT、Roleplay 等 35 個提示詞代碼",
+      caption: "35 ChatGPT Codes 速查表（點圖可在新分頁放大）",
+      width: 1088,
+      height: 1360
+    },
+    sections: [
+      ["怎麼使用", "按下提示詞右上角的「複製」，把［ ］裡的文字換成你自己的內容，再貼到 ChatGPT、Gemini、Claude 等 AI 工具送出即可。代碼也可以組合使用，例如「ELI10 + Table：請用 10 歲小孩聽得懂的方式，以表格比較貓和狗的習性」。"],
+      ["為什麼不只打代碼，而要用完整提示詞？", "這些代碼不是官方指令，AI 是靠字面意思猜出你要的回答方式。ELI5、TL;DR 這類常見代碼多半能被理解，但 Jargonize、Exec Summary 等較少見的代碼，可能被誤解或回答得很籠統。本文的提示詞在代碼後面明確寫出對象、格式與限制，結果更穩定，換成其他 AI 工具也一樣好用。"],
+      ["使用小提醒", "Examples、Case Study、Timeline 等需要事實的代碼，AI 仍可能編造內容，提示詞中已加上「標註需查證」的要求，重要資訊請回到可靠來源確認。貼上內容前，也記得先移除個資與機密資料。"]
+    ],
+    examples: [
+      {
+        title: "基礎解釋與整理結構",
+        items: [
+          {
+            label: "ELI5",
+            desc: "Explain like you're 5. — 用 5 歲小孩也聽得懂的方式說明，極度通俗易懂。",
+            text: "ELI5：請用 5 歲小孩也聽得懂的方式，解釋「［主題］」。\n- 不使用專有名詞；非用不可時，用一句生活化的話說明\n- 用一個日常生活的比喻幫助理解\n- 全文 150 字以內"
+          },
+          {
+            label: "ELI10",
+            desc: "Explain like you're 10. — 用 10 歲小孩能懂的方式說明，具體生動且有基本邏輯。",
+            text: "ELI10：請向 10 歲的小學生解釋「［主題］」。\n- 先用一句話說明它是什麼\n- 再用 2 個日常生活的例子，說明它怎麼運作\n- 最後用一句話說明它為什麼重要\n- 語氣生動、句子簡短"
+          },
+          {
+            label: "TL;DR",
+            desc: "Summarize long text. — 太長不看，長文重點摘要。",
+            text: "TL;DR：請用 3 句話摘要以下內容的核心重點。\n- 第 1 句：最重要的結論\n- 第 2、3 句：支撐結論的關鍵資訊\n- 不加入原文沒有的內容\n\n［貼上內容］"
+          },
+          {
+            label: "Step-by-Step",
+            desc: "Break the process into steps. — 將流程拆解成按部就班的步驟。",
+            text: "Step-by-Step：請把「［目標／流程］」拆解成按部就班的執行步驟。\n- 每一步以動詞開頭，說明要做什麼\n- 標出每一步需要的工具或資料\n- 指出最容易出錯的步驟與注意事項\n- 我的程度是：［新手／有經驗］"
+          },
+          {
+            label: "Checklist",
+            desc: "Turn this into a checklist. — 轉換成可以勾選的檢查清單。",
+            text: "Checklist：請將以下內容整理成可以逐項勾選的檢核清單。\n- 每一項用「□」開頭，一項只做一件事\n- 依執行順序排列，項目多時分組並加上小標題\n- 標出最關鍵、絕對不能漏掉的項目\n\n［貼上內容］"
+          },
+          {
+            label: "Exec Summary",
+            desc: "Give an executive summary. — 給主管看的高階摘要，簡潔、著重結論與商業價值。",
+            text: "Exec Summary：請為管理層撰寫以下內容的高階執行摘要。\n- 第一段直接給出結論與建議\n- 列出 3 個關鍵數據或事實\n- 說明對營收、成本或風險的影響\n- 最後列出需要主管決定的事項\n- 全文 200 字以內\n\n［貼上內容］"
+          },
+          {
+            label: "Outline",
+            desc: "Create a structured outline. — 建立結構化大綱。",
+            text: "Outline：請為「［主題／文章／專案］」規劃一份結構化大綱。\n- 使用多層級標題：主標題、子標題、重點\n- 每個段落附一句說明，寫出這段要講什麼\n- 目標讀者：［讀者］\n- 用途：［簡報／文章／企劃書］"
+          },
+          {
+            label: "Compare",
+            desc: "Compare two or more things. — 比較兩個或多個事物。",
+            text: "Compare：請比較［A］與［B］。\n- 用表格列出比較項目：［例如價格、功能、學習難度］\n- 分別說明兩者的優勢與限制\n- 最後依情境給建議：什麼時候選 A、什麼時候選 B"
+          },
+          {
+            label: "Table",
+            desc: "Present the answer in a table. — 用表格呈現回答。",
+            text: "Table：請將以下資訊整理成 Markdown 表格。\n- 欄位：［欄位1］、［欄位2］、［欄位3］\n- 依［排序依據］排序\n- 缺少的資料填「—」，不要自行編造\n\n［貼上內容］"
+          },
+          {
+            label: "Pros & Cons",
+            desc: "List advantages and disadvantages. — 列出優點與缺點。",
+            text: "Pros & Cons：請客觀列出「［決策／工具／方案］」的優點與缺點。\n- 優點、缺點各列 3～5 點，並簡短說明原因\n- 標出影響最大的一項\n- 最後依我的情況給出建議：［簡述你的情況］"
+          }
+        ]
+      },
+      {
+        title: "分析、語氣調整與格式轉換",
+        items: [
+          {
+            label: "SWOT",
+            desc: "Analyze strengths, weaknesses, opportunities, threats. — 優勢、劣勢、機會、威脅分析。",
+            text: "SWOT：請針對「［公司／產品／個人］」進行 SWOT 分析。\n- 用 2×2 表格呈現優勢、劣勢、機會、威脅，每格 3 點\n- 每一點附一句具體理由\n- 最後提出 3 個可行的行動建議\n- 背景資訊：［產業、規模、目前目標］"
+          },
+          {
+            label: "Bullet Points",
+            desc: "Condense into bullets. — 濃縮成重點列點。",
+            text: "Bullet Points：請將以下內容濃縮成重點列點。\n- 最多 7 點，每點不超過 25 字\n- 依重要性排序\n- 保留關鍵數字與名稱\n\n［貼上內容］"
+          },
+          {
+            label: "Jargonize",
+            desc: "Make it technical. — 加入專業術語，讓內容更技術化、專業化。",
+            text: "Jargonize：請使用「［領域，例如金融／軟體工程／醫療］」的專業術語，改寫以下內容。\n- 讀者是該領域的專業人士\n- 術語使用正確，不為了顯得專業而誇大內容\n- 保留原本的意思與事實\n\n［貼上內容］"
+          },
+          {
+            label: "Humanize",
+            desc: "Make it sound more natural. — 去除 AI 感，讀起來更自然、像真人說話。",
+            text: "Humanize：請改寫以下內容，讓它讀起來像真人自然說話。\n- 避免制式開場與空泛結尾，例如「總而言之」「希望對你有幫助」\n- 句子長短交錯，語氣：［親切／專業／輕鬆］\n- 保留原本的資訊與重點\n\n［貼上內容］"
+          },
+          {
+            label: "Simplify",
+            desc: "Rewrite using plain language. — 用平易近人的白話重寫。",
+            text: "Simplify：請用簡單直白的日常用語，改寫以下文字。\n- 讓國中生也看得懂\n- 一句話只講一件事\n- 專有名詞改成白話，或在後面加括號說明\n\n［貼上內容］"
+          },
+          {
+            label: "Rewrite",
+            desc: "Rephrase while keeping meaning. — 保留原意，換一種說法。",
+            text: "Rewrite：請在保留原意的前提下，換一種說法改寫以下內容。\n- 提供 2 個版本：正式版與輕鬆版\n- 不新增、也不刪除任何資訊\n\n［貼上內容］"
+          },
+          {
+            label: "Shorten",
+            desc: "Make it concise. — 精簡文字，去蕪存菁。",
+            text: "Shorten：請將以下內容精簡約 50%。\n- 保留核心訊息、關鍵數字與結論\n- 刪除重複的內容與贅字\n- 語氣與原文一致\n\n［貼上內容］"
+          },
+          {
+            label: "Expand",
+            desc: "Add detail and examples. — 擴充細節並補充範例。",
+            text: "Expand：請擴充以下內容。\n- 補充背景知識、細節說明，以及 1～2 個實際案例\n- 擴充到約［字數］字\n- 不確定的事實請標註「需查證」，不要自行編造\n\n［貼上內容］"
+          },
+          {
+            label: "Act As [Role]",
+            desc: "Answer from an expert's perspective. — 角色扮演，以特定專家的視角回答。",
+            text: "Act As：請以資深［職稱，例如人資主管／財務顧問］的身分，回答以下問題。\n- 從這個角色的專業經驗與常見做法出發\n- 指出一般人容易忽略的風險\n- 最後給出具體的下一步建議\n\n問題：［你的問題］"
+          },
+          {
+            label: "FAQ",
+            desc: "Turn the topic into FAQs. — 將主題整理成常見問答集。",
+            text: "FAQ：請針對「［主題］」整理 5 個最常見的問題與回答。\n- 問題用讀者的口吻提出\n- 每個回答 2～3 句，先給答案再補充說明\n- 讀者是：［讀者對象］"
+          }
+        ]
+      },
+      {
+        title: "學習、邏輯推演與批判思考",
+        items: [
+          {
+            label: "Quiz Me",
+            desc: "Test my knowledge. — 隨堂測驗，檢查我的理解程度。",
+            text: "Quiz Me：請針對「［主題］」出 3 道測驗題考我。\n- 一次只出一題，等我回答後，再告訴我對錯並解釋\n- 難度由淺入深\n- 全部答完後，總結我需要加強的地方"
+          },
+          {
+            label: "Flashcards",
+            desc: "Create study cards. — 製作學習抽認卡。",
+            text: "Flashcards：請將以下學習內容製作成 10 張抽認卡，並用表格呈現。\n- 欄位：正面（概念或問題）｜背面（解釋或答案）\n- 每張卡只考一個重點，背面不超過 2 句\n\n［貼上內容］"
+          },
+          {
+            label: "Timeline",
+            desc: "Present events in order. — 依時間順序呈現事件。",
+            text: "Timeline：請依時間先後，整理「［歷史事件／專案時程］」的關鍵里程碑。\n- 格式：日期｜事件｜影響\n- 標出最重要的轉折點\n- 不確定的日期請標註「需查證」"
+          },
+          {
+            label: "Decision Tree",
+            desc: "Map options logically. — 決策樹，用邏輯梳理選項與分支。",
+            text: "Decision Tree：請為「［決策問題］」設計一個決策樹。\n- 從最關鍵的判斷問題開始，用「是／否」分支\n- 每條分支的最後，給出建議的選項\n- 用縮排文字呈現，並另外輸出 Mermaid 流程圖語法"
+          },
+          {
+            label: "Examples",
+            desc: "Include real-world examples. — 提供現實世界的真實案例。",
+            text: "Examples：請提供 3 個在生活或工作中實際應用「［概念］」的例子。\n- 每個例子說明：情境、怎麼應用、帶來什麼結果\n- 例子來自不同領域\n- 若是真實事件，請附上可查證的來源；無法確認的請標註「需查證」"
+          },
+          {
+            label: "Case Study",
+            desc: "Explain using a real case. — 用個案分析深入說明。",
+            text: "Case Study：請用一個具體案例，深入說明「［主題］」。\n- 依序說明：背景、問題、解決方案、結果\n- 最後整理 3 個可以借鏡的重點\n- 請註明這是真實案例還是虛構示範"
+          },
+          {
+            label: "First Principles",
+            desc: "Break down fundamentals. — 第一性原理，回到事物本質拆解。",
+            text: "First Principles：請用第一性原理拆解「［問題／領域］」。\n- 先列出這件事最基本、無法再拆解的事實\n- 再從這些事實出發，重新推導出解法\n- 指出哪些常見做法，其實只是習慣或未經檢驗的假設"
+          },
+          {
+            label: "Feynman",
+            desc: "Explain simply like teaching a child. — 費曼學習法，像教小孩一樣講清楚。",
+            text: "Feynman：請用費曼學習法解釋「［複雜概念］」。\n- 想像你在教一位小學生，用生動的比喻說明\n- 解釋完後，指出初學者最容易誤解的 2 個地方\n- 最後出 1 個問題，讓我用自己的話說明，檢查我是不是真的懂"
+          },
+          {
+            label: "Socratic",
+            desc: "Answer with questions. — 蘇格拉底式提問，用問題引導反思。",
+            text: "Socratic：請不要直接給我答案，用蘇格拉底式提問，引導我思考「［主題］」。\n- 一次只問一個問題，等我回答後再追問\n- 根據我的回答，引導我發現自己的盲點\n- 對話結束時，幫我整理出我自己得到的結論"
+          },
+          {
+            label: "Critique",
+            desc: "Find weaknesses and improvements. — 批判審閱，挑出漏洞並提出改進建議。",
+            text: "Critique：請嚴格審閱以下內容。\n- 指出邏輯漏洞、證據不足與表達不清的地方\n- 依嚴重程度排序\n- 每個問題都附上具體的改進建議\n\n［貼上內容］"
+          }
+        ]
+      },
+      {
+        title: "創意思考、格式化與情境演練",
+        items: [
+          {
+            label: "Devil's Advocate",
+            desc: "Argue the opposite view. — 魔鬼代言人，站在反方立場唱反調。",
+            text: "Devil's Advocate：請站在反對的立場，反駁以下觀點。\n- 提出 3 個最有力的反對論點，並附上理由\n- 指出這個觀點最大的風險或盲點\n- 最後告訴我，可以怎麼回應這些反對意見\n\n觀點：［你的觀點］"
+          },
+          {
+            label: "Brainstorm",
+            desc: "Generate a list of ideas. — 腦力激盪，發想多元點子。",
+            text: "Brainstorm：請針對「［目標／問題］」發想 10 個點子。\n- 兼顧創意與可行性，包含保守型與大膽型\n- 每個點子用一句話說明做法\n- 最後挑出 3 個最值得先嘗試的，並說明原因\n- 限制條件：［預算／時間／人力］"
+          },
+          {
+            label: "Mind Map",
+            desc: "Organize ideas visually. — 心智圖，用層級結構整理想法。",
+            text: "Mind Map：請將「［主題］」整理成心智圖結構。\n- 中心主題 → 4～6 個主分支 → 每個分支 2～4 個子項目\n- 先用縮排清單呈現\n- 再另外輸出 Mermaid mindmap 語法，方便貼到繪圖工具"
+          },
+          {
+            label: "JSON / Markdown",
+            desc: "Format as code. — 轉成程式碼或結構化資料格式。要 Markdown 時，把開頭改成「Markdown：請將以下資訊整理成 Markdown 文件」。",
+            text: "JSON：請將以下資訊轉換成標準的 JSON 格式。\n- 欄位名稱使用英文小寫加底線，例如 product_name\n- 數字使用數值型別，缺少的資料填 null\n- 確認語法正確，只輸出 JSON，不要加任何說明文字\n\n［貼上內容］"
+          },
+          {
+            label: "Roleplay",
+            desc: "Act out a scenario. — 情境模擬，進行對話演練。",
+            text: "Roleplay：請和我進行一場「［場景，例如求職面試／商務談判］」的模擬對話。\n- 你扮演［對方身分］，我扮演［我的身分］\n- 由你先開口，一次只說一段話，等我回應\n- 當我輸入「結束」，請評估我的表現，並給我 3 個改進建議"
+          }
+        ]
+      }
+    ],
+    sources: []
+  },
   agentvalue: {
     category: "趨勢觀察 · 重點摘要",
     title: "讓AI發揮價值的方法",
