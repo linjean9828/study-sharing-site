@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eef8ff">
+    <meta name="description" content="一起讀懂人工智慧。探索 AI 工具、實用指南與值得關注的新知，讓科技成為日常的好幫手。">
+    <title>懶懶躺著學AI — 把 AI 知識變成日常</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230284c7%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3Cpath d=%27M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273.2%27/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="articles.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="懶懶躺著學AI 首頁">
+          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+          <span>懶懶躺著學AI</span>
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="主要導覽">
+          <a class="nav-link" href="#articles">我的筆記</a>
+          <a class="nav-link" href="#overview">文章總覽</a>
+          <a class="nav-link" href="#about">關於我們</a>
+        </nav>
+        <button class="saved-nav" id="saved-toggle" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg>
+          <span>我的收藏</span><span class="saved-count" id="saved-count">0</span>
+        </button>
+        <button class="menu-button" id="menu-button" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="main-nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="menu-open" d="M4 7h16M4 12h16M4 17h16"/><path class="menu-close" d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section articles-section" id="articles" aria-labelledby="articles-title">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2 id="articles-title">我的筆記</h2>
+            <span class="title-bar" aria-hidden="true"></span>
+            <p>依主題瀏覽，或直接搜尋你想了解的 AI 知識。</p>
+          </div>
+
+          <div class="toolbar-card">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4 4"></path></svg>
+              <input id="search-input" type="search" placeholder="搜尋 AI 知識..." aria-label="搜尋文章">
+              <kbd>/</kbd>
+            </label>
+            <div class="feed-toolbar">
+              <div class="filter-list" role="group" aria-label="文章分類">
+                <button class="filter-button selected" type="button" data-filter="全部" aria-pressed="true">全部文章</button>
+                <button class="filter-button" type="button" data-filter="入門指南" aria-pressed="false">入門指南</button>
+                <button class="filter-button" type="button" data-filter="AI 工具" aria-pressed="false">AI 工具</button>
+                <button class="filter-button" type="button" data-filter="趨勢觀察" aria-pressed="false">趨勢觀察</button>
+              </div>
+              <span class="result-count" id="result-count">7 篇文章</span>
+            </div>
+          </div>
+
+          <div class="article-grid" id="article-grid">
+            <article class="article-card" data-category="趨勢觀察" data-search="李宏毅 AI Agent 出題 驗收 監督 指導教授 小金老師 Gemini 數位時代 方向 教育 落地 實作 範本 清單 驗收標準 會議摘要 Excel 文案 簡報">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">趨勢觀察</span><span class="read-time" data-minutes="8">8 分鐘</span></div>
+                <a class="card-title" href="article.html?id=agentvalue" target="_blank" rel="noopener">讓AI發揮價值的方法</a>
+                <p class="card-summary">摘要李宏毅教授提出的出題、驗收、監督 3 項能力，並整理成可直接套用的範本與檢查清單，馬上落地實作。</p>
+                <p class="card-source">出處：數位時代（2026/09/30）</p>
+                <p class="card-dates" data-dates="agentvalue"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=agentvalue" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="agentvalue" aria-label="收藏文章：讓AI發揮價值的方法" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="入門指南" data-search="生成式 AI 入門 大型語言模型 token 機率">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">入門指南</span><span class="read-time" data-minutes="5">5 分鐘</span></div>
+                <a class="card-title" href="article.html?id=prompt" target="_blank" rel="noopener">第一次使用生成式 AI，從這裡開始</a>
+                <p class="card-summary">不必先懂程式。用一個好問題，認識 AI 怎麼理解、組織並生成文字。</p>
+                <p class="card-dates" data-dates="prompt"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=prompt" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="prompt" aria-label="收藏文章：第一次使用生成式 AI，從這裡開始" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="AI 工具" data-search="提示詞 prompt 寫作技巧 指令 AI 工具 護膚 精華液 保濕 緊緻 透亮 IG hashtag 文案">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">AI 工具</span><span class="read-time" data-minutes="4">4 分鐘</span></div>
+                <a class="card-title" href="article.html?id=writing" target="_blank" rel="noopener">讓 AI 更懂你：提示詞的 4 個小技巧</a>
+                <p class="card-summary">用護膚精華上市文案為例，看看如何補充背景、產品訴求與格式，讓 AI 回答更貼近需要。</p>
+                <p class="card-dates" data-dates="writing"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=writing" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="writing" aria-label="收藏文章：讓 AI 更懂你：提示詞的 4 個小技巧" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="趨勢觀察" data-search="大型語言模型 LLM 語言模型 token 原理 AI 趨勢">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">趨勢觀察</span><span class="read-time" data-minutes="6">6 分鐘</span></div>
+                <a class="card-title" href="article.html?id=models" target="_blank" rel="noopener">大型語言模型到底是什麼？</a>
+                <p class="card-summary">LLM、Token、訓練資料⋯⋯用生活化的比喻，拆解生成式 AI 背後的原理。</p>
+                <p class="card-dates" data-dates="models"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=models" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="models" aria-label="收藏文章：大型語言模型到底是什麼？" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="AI 工具" data-search="AI 工作流程 生產力 摘要 整理 工作術">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">AI 工具</span><span class="read-time" data-minutes="5">5 分鐘</span></div>
+                <a class="card-title" href="article.html?id=workflow" target="_blank" rel="noopener">把 AI 放進工作流程，先從這 3 件事開始</a>
+                <p class="card-summary">會議摘要、資料整理、草稿起步——找出省時又不需要交出判斷權的小任務。</p>
+                <p class="card-dates" data-dates="workflow"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=workflow" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="workflow" aria-label="收藏文章：把 AI 放進工作流程，先從這 3 件事開始" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="入門指南" data-search="AI 幻覺 查證 事實錯誤 引用 可靠性">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">入門指南</span><span class="read-time" data-minutes="4">4 分鐘</span></div>
+                <a class="card-title" href="article.html?id=factcheck" target="_blank" rel="noopener">AI 也會答錯：學會這 3 招安心查證</a>
+                <p class="card-summary">AI 的回答不等於事實。善用可靠來源、交叉比對，讓重要資訊更值得信賴。</p>
+                <p class="card-dates" data-dates="factcheck"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=factcheck" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="factcheck" aria-label="收藏文章：AI 也會答錯：學會這 3 招安心查證" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+
+            <article class="article-card" data-category="趨勢觀察" data-search="隱私 AI 個資 資料安全 數位安全">
+              <div class="card-body">
+                <div class="card-kicker"><span class="category-label">趨勢觀察</span><span class="read-time" data-minutes="3">3 分鐘</span></div>
+                <a class="card-title" href="article.html?id=privacy" target="_blank" rel="noopener">使用 AI 工具，個人資料保護小提醒</a>
+                <p class="card-summary">先看懂資料使用政策，也別把密碼、客戶資料或個資直接貼進聊天視窗。</p>
+                <p class="card-dates" data-dates="privacy"></p>
+                <div class="card-bottom"><a class="read-more" href="article.html?id=privacy" target="_blank" rel="noopener">閱讀全文 <span aria-hidden="true">→</span></a><button class="bookmark-button" type="button" data-bookmark="privacy" aria-label="收藏文章：使用 AI 工具，個人資料保護小提醒" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg></button></div>
+              </div>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>找不到符合條件的文章，試試其他關鍵字或分類。</p>
+        </div>
+      </section>
+
+      <section class="section container" id="overview" aria-labelledby="overview-title">
+        <div class="overview-card reveal">
+          <div class="overview-head">
+            <h2 id="overview-title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>
+              文章總覽
+            </h2>
+            <div class="progress" aria-live="polite">
+              <span>我的收藏 <strong id="progress-text">0 / 6</strong></span>
+              <span class="progress-track"><span class="progress-fill" id="progress-fill"></span></span>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="overview-table">
+              <thead>
+                <tr><th scope="col">主題</th><th scope="col">文章</th><th scope="col">閱讀時間</th><th scope="col">更新日期</th><th scope="col">收藏</th></tr>
+              </thead>
+              <tbody id="overview-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-band" id="about" aria-labelledby="about-title">
+        <div class="container about-inner reveal">
+          <h2 id="about-title">好奇心，值得被好好照顧</h2>
+          <p>我們相信，理解 AI 不必有門檻。這裡沒有艱澀術語，只有好奇、分享，和更好的問題。一起讀、一起問，也一起找到科技與生活的好距離。</p>
+          <a class="text-link" href="#articles">開始閱讀第一篇 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2>懶懶躺著學AI · 把 AI 知識分享給每一個好奇的你</h2>
+        <p class="copyright">© 2026 懶懶躺著學AI. 用好奇心，持續更新。</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

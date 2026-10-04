@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eef8ff">
+    <meta name="description" content="懶懶躺著學AI 的筆記全文。">
+    <title>筆記 — 懶懶躺著學AI</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230284c7%27 stroke-width=%272%27 stroke-linecap=%27round%27%3E%3Cpath d=%27M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1%27/%3E%3Ccircle cx=%2712%27 cy=%2712%27 r=%273.2%27/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="articles.js" defer></script>
+    <script src="article.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="懶懶躺著學AI 首頁">
+          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+          <span>懶懶躺著學AI</span>
+        </a>
+        <a class="back-link" href="index.html#articles">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg>
+          回到我的筆記
+        </a>
+      </div>
+    </header>
+
+    <main class="container article-page">
+      <article class="article-sheet" id="article" hidden>
+        <div class="article-meta">
+          <span class="category-label" id="article-category"></span>
+          <span class="read-time" id="article-read-time"></span>
+        </div>
+        <h1 id="article-title"></h1>
+        <p class="article-dates" id="article-dates"></p>
+        <p class="article-credit" id="article-credit" hidden></p>
+        <p class="article-intro" id="article-intro"></p>
+        <div class="article-content" id="article-content"></div>
+        <div class="article-sources" id="article-sources"></div>
+        <div class="article-actions">
+          <a class="read-more" href="index.html#articles"><span aria-hidden="true">←</span> 回到我的筆記</a>
+          <button class="row-bookmark" id="article-bookmark" type="button" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.75 4.75A1.75 1.75 0 0 1 8.5 3h7A1.75 1.75 0 0 1 17.25 4.75V21L12 17.5 6.75 21V4.75Z"/></svg>
+            <span>加入收藏</span>
+          </button>
+        </div>
+      </article>
+
+      <section class="article-sheet not-found" id="not-found" hidden>
+        <h1>找不到這篇筆記</h1>
+        <p>連結可能有誤，或這篇筆記已經移除。</p>
+        <a class="read-more" href="index.html#articles"><span aria-hidden="true">←</span> 回到我的筆記</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2>懶懶躺著學AI · 把 AI 知識分享給每一個好奇的你</h2>
+        <p class="copyright">© 2026 懶懶躺著學AI. 用好奇心，持續更新。</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
