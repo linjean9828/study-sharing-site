@@ -1,11 +1,11 @@
 const articles = {
   gptcodes: {
     category: "AI 工具 · 提示詞",
-    title: "ChatGPT Codes (Powerful prompts. Better answers.)",
+    title: "強化提示詞，可以得到更好的答案",
     published: "2026-10-04",
     updated: "2026-10-04",
     minutes: 10,
-    intro: "ChatGPT Codes 是放在提示詞開頭的簡短代碼，像給 AI 的快捷指令，告訴它要用什麼方式回答，例如「ELI5 — Explain quantum computing」。本文整理 35 個常用代碼，每個都優化成可以直接複製使用的完整提示詞。",
+    intro: "ChatGPT Codes（提示詞代碼）是放在提示詞開頭的簡短代碼，像給 AI 的快捷指令，告訴它要用什麼方式回答，例如「ELI5 — Explain quantum computing」。本文整理 35 個常用代碼，每個都優化成可以直接複製使用的完整提示詞。",
     credit: {
       prefix: "圖片出處：",
       label: "〈35 ChatGPT Codes〉Adam Digital；中文說明與提示詞由本站翻譯、優化"
@@ -18,8 +18,8 @@ const articles = {
       height: 1360
     },
     sections: [
-      ["怎麼使用", "按下提示詞右上角的「複製」，把［ ］裡的文字換成你自己的內容，再貼到 ChatGPT、Gemini、Claude 等 AI 工具送出即可。代碼也可以組合使用，例如「ELI10 + Table：請用 10 歲小孩聽得懂的方式，以表格比較貓和狗的習性」。"],
-      ["為什麼不只打代碼，而要用完整提示詞？", "這些代碼不是官方指令，AI 是靠字面意思猜出你要的回答方式。ELI5、TL;DR 這類常見代碼多半能被理解，但 Jargonize、Exec Summary 等較少見的代碼，可能被誤解或回答得很籠統。本文的提示詞在代碼後面明確寫出對象、格式與限制，結果更穩定，換成其他 AI 工具也一樣好用。"],
+      ["怎麼使用", "按下提示詞右上角的「複製」，把［ ］連同括號換成你自己的內容，再貼到 ChatGPT、Gemini、Claude 等 AI 工具送出即可。代碼也可以組合使用，例如「ELI10 + Table：請用 10 歲小孩聽得懂的方式，以表格比較貓和狗的習性」。"],
+      ["為什麼不只打代碼，而要用完整提示詞？", "這些代碼不是官方指令，AI 是靠字面意思猜出你要的回答方式。ELI5、TL;DR 這類常見代碼多半能被理解，但 Jargonize、Exec Summary 等較少見的代碼，可能被誤解或回答得很籠統。本文的提示詞在代碼後面明確寫出對象、格式與限制，結果更穩定，也比較不受使用哪一個 AI 工具影響。"],
       ["使用小提醒", "Examples、Case Study、Timeline 等需要事實的代碼，AI 仍可能編造內容，提示詞中已加上「標註需查證」的要求，重要資訊請回到可靠來源確認。貼上內容前，也記得先移除個資與機密資料。"]
     ],
     examples: [
@@ -54,7 +54,7 @@ const articles = {
           {
             label: "Exec Summary",
             desc: "Give an executive summary. — 給主管看的高階摘要，簡潔、著重結論與商業價值。",
-            text: "Exec Summary：請為管理層撰寫以下內容的高階執行摘要。\n- 第一段直接給出結論與建議\n- 列出 3 個關鍵數據或事實\n- 說明對營收、成本或風險的影響\n- 最後列出需要主管決定的事項\n- 全文 200 字以內\n\n［貼上內容］"
+            text: "Exec Summary：請為管理層撰寫以下內容的高階執行摘要。\n- 第一段直接給出結論與建議\n- 列出最多 3 個關鍵數據或事實，只使用內容中有的資料，不要自行編造\n- 說明對營收、成本或風險的影響\n- 最後列出需要主管決定的事項\n- 全文 200 字以內\n\n［貼上內容］"
           },
           {
             label: "Outline",
@@ -64,12 +64,12 @@ const articles = {
           {
             label: "Compare",
             desc: "Compare two or more things. — 比較兩個或多個事物。",
-            text: "Compare：請比較［A］與［B］。\n- 用表格列出比較項目：［例如價格、功能、學習難度］\n- 分別說明兩者的優勢與限制\n- 最後依情境給建議：什麼時候選 A、什麼時候選 B"
+            text: "Compare：請比較［A］與［B］。\n- 用表格列出比較項目：［例如價格、功能、學習難度］\n- 分別說明兩者的優勢與限制\n- 最後依情境給建議：什麼時候選 A、什麼時候選 B\n- 價格、規格等可能變動或不確定的資訊，請標註「需查證」"
           },
           {
             label: "Table",
             desc: "Present the answer in a table. — 用表格呈現回答。",
-            text: "Table：請將以下資訊整理成 Markdown 表格。\n- 欄位：［欄位1］、［欄位2］、［欄位3］\n- 依［排序依據］排序\n- 缺少的資料填「—」，不要自行編造\n\n［貼上內容］"
+            text: "Table：請將以下資訊整理成 Markdown 表格。\n- 欄位：［欄位1］、［欄位2］、［欄位3］（不確定要哪些欄位時，刪掉這一行，請 AI 先建議合適的欄位）\n- 依［排序依據］排序\n- 缺少的資料填「—」，不要自行編造\n\n［貼上內容］"
           },
           {
             label: "Pros & Cons",
@@ -84,7 +84,7 @@ const articles = {
           {
             label: "SWOT",
             desc: "Analyze strengths, weaknesses, opportunities, threats. — 優勢、劣勢、機會、威脅分析。",
-            text: "SWOT：請針對「［公司／產品／個人］」進行 SWOT 分析。\n- 用 2×2 表格呈現優勢、劣勢、機會、威脅，每格 3 點\n- 每一點附一句具體理由\n- 最後提出 3 個可行的行動建議\n- 背景資訊：［產業、規模、目前目標］"
+            text: "SWOT：請針對「［公司／產品／個人］」進行 SWOT 分析。\n- 用 2×2 表格呈現優勢、劣勢、機會、威脅，每格 3 點\n- 每一點附一句具體理由\n- 最後提出 3 個可行的行動建議\n- 背景資訊：［產業、規模、目前目標］\n- 資訊不足的地方請標註「假設」，不要當成事實"
           },
           {
             label: "Bullet Points",
@@ -124,7 +124,7 @@ const articles = {
           {
             label: "Act As [Role]",
             desc: "Answer from an expert's perspective. — 角色扮演，以特定專家的視角回答。",
-            text: "Act As：請以資深［職稱，例如人資主管／財務顧問］的身分，回答以下問題。\n- 從這個角色的專業經驗與常見做法出發\n- 指出一般人容易忽略的風險\n- 最後給出具體的下一步建議\n\n問題：［你的問題］"
+            text: "Act As：請以資深［職稱，例如人資主管／財務顧問］的身分，回答以下問題。\n- 從這個角色的專業經驗與常見做法出發\n- 指出一般人容易忽略的風險\n- 最後給出具體的下一步建議\n- 涉及法律、醫療、財務等重大決定時，提醒我向真正的專業人士確認\n\n問題：［你的問題］"
           },
           {
             label: "FAQ",
@@ -144,7 +144,7 @@ const articles = {
           {
             label: "Flashcards",
             desc: "Create study cards. — 製作學習抽認卡。",
-            text: "Flashcards：請將以下學習內容製作成 10 張抽認卡，並用表格呈現。\n- 欄位：正面（概念或問題）｜背面（解釋或答案）\n- 每張卡只考一個重點，背面不超過 2 句\n\n［貼上內容］"
+            text: "Flashcards：請將以下學習內容製作成抽認卡，並用表格呈現。\n- 最多 10 張；重點不到 10 個時，依實際重點數量製作\n- 欄位：正面（概念或問題）｜背面（解釋或答案）\n- 每張卡只考一個重點，背面不超過 2 句\n\n［貼上內容］"
           },
           {
             label: "Timeline",
