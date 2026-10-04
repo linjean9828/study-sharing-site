@@ -23,3 +23,8 @@
 將 `index.html`、`article.html`、`styles.css`、`articles.js`、`app.js`、`article.js` 與 `img/` 資料夾一起部署到任何靜態網站主機即可。Google Fonts 字型需要網路連線；無法載入時，網站會使用系統字型。
 
 本網站不會將資料送到伺服器；收藏僅保存在目前瀏覽器。延伸閱讀連結會開啟各組織的公開 AI 學習資源。
+
+## 圖片授權
+
+- `img/laozi-bnext.jpg`：數位時代〈把老子做成AI Skill！40句道德經＋5個心智模型，工作卡關可以免費問〉封面插畫，文章中已標示出處；著作權屬原權利人。
+- `img/gpt_code.jpg`：〈35 ChatGPT Codes〉，Adam Digital，文章中已標示出處。
